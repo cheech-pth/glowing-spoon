@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Click the <a href="/new">link here</a> to submit a new message to the board!</p>
+
+    <% messages.forEach((msg) => { %>
+        <h3><%= msg.user %></h3>
+        <p><%= msg.text %></p>
+        <h5><%= msg.added %></h5>
+      <% }) %>
+  </body>
+</html>
